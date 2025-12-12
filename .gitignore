@@ -1,0 +1,75 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio cache/options directory
+.vs/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+
+# Auto-generated files
+Generated\ Files/
+
+# NuGet packages
+*.nupkg
+# NuGet Symbol packages
+*.snupkg
+# The packages folder can be ignored because of package restore
+packages/
+
+# Backup & log files
+*.log
+*.tlog
+
+# DotCover
+*.dotCover
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Environment files
+*.env
+*.env.local
+.env.*
+
+# Publish output
+publish/
+out/
+
+# MacOS
+.DS_Store
+
+# Docker
+docker-compose.override.yml
+*.containerignore
+
+# Node (in case frontend pieces appear)
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Other system files
+Thumbs.db
+Desktop.ini
+
+# Render / Deployment artifacts
+render.yaml
+
+# GitHub Actions artifacts
+*.workflow
