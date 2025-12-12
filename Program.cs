@@ -19,7 +19,6 @@ app.UseCors(policy =>
           .AllowAnyMethod();
 });
 
-app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
