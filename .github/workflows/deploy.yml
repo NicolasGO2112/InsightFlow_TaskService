@@ -22,7 +22,7 @@ jobs:
         run: docker build -t tuusuario/insightflow-tasks .
 
       - name: Push to Docker Hub
-        run: docker push tuusuario/insightflow-tasks:latest
+        run: docker push nicolasgo21/insightflow-tasks:latest
 
       - name: Trigger Render Deploy
         run: |
