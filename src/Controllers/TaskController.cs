@@ -69,7 +69,7 @@ namespace TasksService.Controllers
         public IActionResult Delete(Guid id)
         {
             bool deleted = _repo.SoftDelete(id);
-            return deleted ? NoContent() : NotFound();
+            return Ok(deleted);
         }
     }
 }
