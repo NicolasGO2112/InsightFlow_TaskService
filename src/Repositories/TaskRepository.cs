@@ -28,6 +28,8 @@ namespace TasksService.Repositories
             if (task == null) return null;
 
             task.Title = data.Title ?? task.Title;
+            task.Description = data.Description ?? task.Description;
+            task.Comment = data.Comment ?? task.Comment;
             task.Status = data.Status ?? task.Status;
             task.AssignedTo = data.AssignedTo != Guid.Empty ? data.AssignedTo : task.AssignedTo;
             task.DueDate = data.DueDate != DateTime.MinValue ? data.DueDate : task.DueDate;

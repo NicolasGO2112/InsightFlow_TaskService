@@ -25,6 +25,8 @@ namespace TasksService.Controllers
                 Id = Guid.NewGuid(),
                 DocumentId = dto.DocumentId,
                 Title = dto.Title,
+                Description = dto.Description,
+                Comment = dto.Comment,
                 Status = dto.Status,
                 AssignedTo = dto.AssignedTo,
                 DueDate = dto.DueDate
@@ -56,6 +58,8 @@ namespace TasksService.Controllers
             var updated = _repo.Update(id, new TaskItem
             {
                 Title = dto.Title,
+                Description = dto.Description,
+                Comment = dto.Comment,
                 Status = dto.Status,
                 AssignedTo = dto.AssignedTo ?? Guid.Empty,
                 DueDate = dto.DueDate ?? DateTime.MinValue
@@ -69,7 +73,7 @@ namespace TasksService.Controllers
         public IActionResult Delete(Guid id)
         {
             bool deleted = _repo.SoftDelete(id);
-            return Ok(deleted);
+            return deleted ? NoContent() : NotFound();
         }
     }
 }
